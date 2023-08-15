@@ -1,0 +1,9 @@
+C:\Users\guillezdev\Documents\ahorasi\.mono\temp\bin\Debug\Ahorasiqsi.dll
+C:\Users\guillezdev\Documents\ahorasi\.mono\temp\bin\Debug\Ahorasiqsi.pdb
+C:\Users\guillezdev\Documents\ahorasi\.mono\temp\obj\Debug\Ahorasiqsi.csproj.AssemblyReference.cache
+C:\Users\guillezdev\Documents\ahorasi\.mono\temp\obj\Debug\Ahorasiqsi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guillezdev\Documents\ahorasi\.mono\temp\obj\Debug\Ahorasiqsi.AssemblyInfoInputs.cache
+C:\Users\guillezdev\Documents\ahorasi\.mono\temp\obj\Debug\Ahorasiqsi.AssemblyInfo.cs
+C:\Users\guillezdev\Documents\ahorasi\.mono\temp\obj\Debug\Ahorasiqsi.csproj.CoreCompileInputs.cache
+C:\Users\guillezdev\Documents\ahorasi\.mono\temp\obj\Debug\Ahorasiqsi.dll
+C:\Users\guillezdev\Documents\ahorasi\.mono\temp\obj\Debug\Ahorasiqsi.pdb

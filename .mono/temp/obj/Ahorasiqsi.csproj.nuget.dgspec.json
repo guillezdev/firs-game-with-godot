@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\guillezdev\\Documents\\ahorasi\\Ahorasiqsi.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\guillezdev\\Documents\\ahorasi\\Ahorasiqsi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\guillezdev\\Documents\\ahorasi\\Ahorasiqsi.csproj",
+        "projectName": "Ahorasiqsi",
+        "projectPath": "c:\\Users\\guillezdev\\Documents\\ahorasi\\Ahorasiqsi.csproj",
+        "packagesPath": "C:\\Users\\guillezdev\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\guillezdev\\Documents\\ahorasi\\.mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\guillezdev\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World/TileMap/Tailset.tres" type="TileSet" id=1]
+
+[node name="World" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, 2 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 524293, 7, 0, 524294, 8, 0 )
