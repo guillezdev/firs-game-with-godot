@@ -7,12 +7,16 @@ public class Player : KinematicBody2D
     float hp = 100;
     int damage = 10;
     bool live = true;
-    float speed;
+    float defaultSpeed;
+    float currentSpeed;
     float jumpH;
 
     const float gravity = 2000;
 
+    public AnimatedSprite _animatedSprite;
+
     public Vector2 velocity = new Vector2(10, 10);
+
 
 
     public override void _Ready()
@@ -22,16 +26,25 @@ public class Player : KinematicBody2D
         hp = 100;
         damage = 10;
         live = true;
-        speed = 200;
+        defaultSpeed = 200;
+        currentSpeed = 400;
         jumpH = 130;
 
+        _animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
 
     }
-
-    public override void _Process(float deltaTime)
+    /* public override void _Process(float delta)
     {
+        if (Input.IsActionPressed("Run"))
+        {
+            _animatedSprite.Play("runing");
+        }
+        if (Input.IsActionPressed(""))
+        {
+            _animatedSprite.Play("idle");
+        }
+    } */
 
-    }
     public override void _PhysicsProcess(float deltaTime)
     {
 
@@ -45,15 +58,34 @@ public class Player : KinematicBody2D
 
 
 
+        if (Input.IsActionJustPressed("Run"))
+        {
+            defaultSpeed = currentSpeed;
+        }
+
+        if (Input.IsActionJustReleased("Run"))
+        {
+            defaultSpeed = 200;
+        }
+
 
         if (Input.IsActionPressed("Right"))
         {
-            velocity.x += speed;
+            velocity.x += defaultSpeed;
+            _animatedSprite.Play("runing");
+            _animatedSprite.FlipH = false;
         }
-        if (Input.IsActionPressed("Left"))
+        else if (Input.IsActionPressed("Left"))
         {
-            velocity.x -= speed;
+            velocity.x -= defaultSpeed;
+            _animatedSprite.Play("runing");
+            _animatedSprite.FlipH = true;
         }
+        else
+        {
+            _animatedSprite.Play("idle");
+        }
+
 
         MoveAndSlide(velocity, Vector2.Up);
 
@@ -67,6 +99,7 @@ public class Player : KinematicBody2D
             {
                 velocity.y = -(float)Math.Sqrt(2 * gravity * jumpH);
             }
+
         }
 
     }

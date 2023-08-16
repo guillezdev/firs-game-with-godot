@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://World/Player/Sprites/Dead__001.png" type="Texture" id=1]
 [ext_resource path="res://World/Player/Sprites/Dead__006.png" type="Texture" id=2]
@@ -36,34 +36,14 @@
 [ext_resource path="res://World/Player/Sprites/Idle__008.png" type="Texture" id=34]
 [ext_resource path="res://World/Player/Sprites/Idle__000.png" type="Texture" id=35]
 [ext_resource path="res://World/Player/Sprites/Idle__007.png" type="Texture" id=36]
-[ext_resource path="res://World/Player/Sprites/Slide__002.png" type="Texture" id=37]
-[ext_resource path="res://World/Player/Sprites/Slide__003.png" type="Texture" id=38]
-[ext_resource path="res://World/Player/Sprites/Slide__001.png" type="Texture" id=39]
 [ext_resource path="res://World/Player/Sprites/Jump__007.png" type="Texture" id=40]
-[ext_resource path="res://World/Player/Sprites/Slide__009.png" type="Texture" id=41]
 [ext_resource path="res://World/Player/Sprites/Jump__006.png" type="Texture" id=42]
-[ext_resource path="res://World/Player/Sprites/Slide__004.png" type="Texture" id=43]
-[ext_resource path="res://World/Player/Sprites/Slide__005.png" type="Texture" id=44]
-[ext_resource path="res://World/Player/Sprites/Slide__006.png" type="Texture" id=45]
-[ext_resource path="res://World/Player/Sprites/Slide__007.png" type="Texture" id=46]
 [ext_resource path="res://World/Player/Sprites/Jump__009.png" type="Texture" id=47]
-[ext_resource path="res://World/Player/Sprites/Slide__000.png" type="Texture" id=48]
-[ext_resource path="res://World/Player/Sprites/Slide__008.png" type="Texture" id=49]
 [ext_resource path="res://World/Player/Sprites/Jump__008.png" type="Texture" id=50]
 [ext_resource path="res://World/Player/Player.cs" type="Script" id=51]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "Run",
-"speed": 18.0
-}, {
-"frames": [ ExtResource( 48 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 49 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "Slide",
-"speed": 24.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 6 ) ],
 "loop": false,
 "name": "dead",
@@ -78,6 +58,11 @@ animations = [ {
 "loop": true,
 "name": "jump",
 "speed": 24.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "runing",
+"speed": 18.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -91,8 +76,6 @@ script = ExtResource( 51 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
-frame = 8
-playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, -1 )
