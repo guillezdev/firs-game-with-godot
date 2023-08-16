@@ -57,7 +57,7 @@ animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "Run",
-"speed": 24.0
+"speed": 18.0
 }, {
 "frames": [ ExtResource( 48 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 49 ), ExtResource( 41 ) ],
 "loop": true,
@@ -84,12 +84,14 @@ animations = [ {
 extents = Vector2( 120.5, 218 )
 
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( 52, 323 )
+scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 51 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "idle"
-frame = 1
+animation = "Run"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -8,9 +8,12 @@ public class Player : KinematicBody2D
     int damage = 10;
     bool live = true;
     float speed;
-  
+    float jumpH;
 
-    public Vector2 distance = new Vector2(10, 10);
+    const float gravity = 2000;
+
+    public Vector2 velocity = new Vector2(10, 10);
+
 
     public override void _Ready()
     {
@@ -19,21 +22,52 @@ public class Player : KinematicBody2D
         hp = 100;
         damage = 10;
         live = true;
-        speed = 100;
+        speed = 200;
+        jumpH = 130;
+
 
     }
 
     public override void _Process(float deltaTime)
     {
-        distance.x = 0;
+
+    }
+    public override void _PhysicsProcess(float deltaTime)
+    {
+
+        PlayerAction(deltaTime);
+
+    }
+
+    public void PlayerAction(float deltaTime)
+    {
+        velocity.x = 0;
+
+
+        velocity.y += gravity * deltaTime;
+
         if (Input.IsActionPressed("Right"))
         {
-            distance.x += speed * deltaTime;
+            velocity.x += speed;
         }
         if (Input.IsActionPressed("Left"))
         {
-            distance.x -= speed * deltaTime;
+            velocity.x -= speed;
         }
-        Position += distance;
+
+        MoveAndSlide(velocity, Vector2.Up);
+
+
+
+        if (IsOnFloor())
+        {
+            velocity.y = 0;
+
+            if (Input.IsActionPressed("Jump"))
+            {
+                velocity.y = -(float)Math.Sqrt(2 * gravity * jumpH);
+            }
+        }
+
     }
 }
