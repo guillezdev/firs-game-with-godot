@@ -32,18 +32,9 @@ public class Player : KinematicBody2D
 
         _animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
 
+
     }
-    /* public override void _Process(float delta)
-    {
-        if (Input.IsActionPressed("Run"))
-        {
-            _animatedSprite.Play("runing");
-        }
-        if (Input.IsActionPressed(""))
-        {
-            _animatedSprite.Play("idle");
-        }
-    } */
+
 
     public override void _PhysicsProcess(float deltaTime)
     {
@@ -61,11 +52,13 @@ public class Player : KinematicBody2D
         if (Input.IsActionJustPressed("Run"))
         {
             defaultSpeed = currentSpeed;
+            _animatedSprite.Frames.SetAnimationSpeed("runing", 30);
         }
 
         if (Input.IsActionJustReleased("Run"))
         {
             defaultSpeed = 200;
+            _animatedSprite.Frames.SetAnimationSpeed("runing", 18);
         }
 
 
@@ -103,4 +96,5 @@ public class Player : KinematicBody2D
         }
 
     }
+
 }
