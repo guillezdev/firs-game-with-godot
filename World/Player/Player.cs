@@ -44,7 +44,7 @@ public class Player : KinematicBody2D
         velocity.x = 0;
 
 
-        velocity.y += gravity * deltaTime;
+
 
         if (Input.IsActionPressed("Right"))
         {
@@ -57,7 +57,7 @@ public class Player : KinematicBody2D
 
         MoveAndSlide(velocity, Vector2.Up);
 
-
+        velocity.y += gravity * deltaTime;
 
         if (IsOnFloor())
         {
